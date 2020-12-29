@@ -3,6 +3,9 @@ from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
 import os
 
+print ("Connecting...")
+
+
 opt = Options()
 opt.headless = True
 browser = Chrome(options=opt)
@@ -15,6 +18,7 @@ try:
 except NoSuchElementException:
     print("Unable to connect" + "\n")
 
+os.system('clear')
 
 #table = browser.find_elements_by_xpath("//*[@id='main']/div[3]/div/div[1]")
 #table = browser.find_elements_by_xpath("//*[@id='main']/div[3]/div/div[1]/game-tile[1]/h3")
